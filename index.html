@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <a href="actionpage.php"></a>';
+    </head>
+<body>
+
+<h2>My HTML form</h2>
+
+<form action="./actionpage.php" method="POST">
+    <!--TEXT input type-->
+    <div class="text">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+    
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+</div> 
+  <!--SELECT input type-->
+  <div class="select ">
+  <label for="country"  style="display: block">Choose your Country </label>
+    <select id="country" name="country" >
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="Russia">Russia</option>
+        <option value="Australia">Australia</option>
+   
+</select>
+</div>
+<!--RADIO BUTTON input type-->
+<div class="radio">
+<div> Choose your favourite language</div>
+<input type="radio" id="html" name="fav_language" value="HTML">
+<label for="html">HTML</label><br>
+<input type="radio" id="css" name="fav_language" value="CSS">
+<label for="css">CSS</label><br>
+<input type="radio" id="javascript" name="fav_language" value="JavaScript">
+<label for="javascript">JavaScript</label>
+</div>
+ <!--TEXTAREA input type-->
+ <div class="textarea">
+ <textarea name="message" rows="10" cols="30">
+    The cat was playing in the garden.
+    </textarea>
+    </div>
+  <input type="submit" value="Submit">
+  <?php include('actionpage.php') ?>
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>
